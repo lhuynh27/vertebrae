@@ -54,7 +54,7 @@ myTweet.set('message', 'Hello, world!');
 /* Using the reference, get the message attribute of the model and display it:
  * http://backbonejs.org/#Model-get */
 
-// window.alert(YOUR CODE HERE);
+window.alert(myTweet.get('message')); 
 
 /* - Backbone EVENTS ----------------------------------------------------------
  * Backbone gives us the ability to listen for events on our models,
@@ -77,13 +77,13 @@ myTweet.set('message', 'Hello, world!');
 
 /* Listen for our model's `change` event: */
 myTweet.on('change',
-  function(/* this event holds information about the change: */ e) {
+  function(e) { /* this event holds information about the change: */ 
     // Let ourselves know that something was changed:
     console.info('Something in this tweet model was changed!');
     console.log(e);
 
     // Write code to log the changed attribute:
-    // console.log(YOUR CODE HERE);
+    console.log(myTweet.get('change'));
   }
 );
 
